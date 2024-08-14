@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos de Computador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Produtos de Computador</h1>
+    <form id="productForm">
+        <div class="form-group">
+            <label for="codigo">Código do Computador:</label>
+            <input type="text" id="codigo" name="codigo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fabricantePlacaMae">Fabricante da Placa-Mãe:</label>
+            <input type="text" id="fabricantePlacaMae" name="fabricantePlacaMae" required>
+        </div>
+
+        <div class="form-group">
+            <label for="memoriaRAM">Quantidade de Gigabytes da Memória RAM:</label>
+            <input type="number" id="memoriaRAM" name="memoriaRAM" required>
+        </div>
+
+        <div class="form-group">
+            <label for="velocidadeProcessador">Velocidade do Processador (GHz):</label>
+            <input type="number" step="0.1" id="velocidadeProcessador" name="velocidadeProcessador" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fabricanteProcessador">Fabricante do Processador:</label>
+            <select id="fabricanteProcessador" name="fabricanteProcessador" required>
+                <option value="Intel">Intel</option>
+                <option value="AMD">AMD</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nucleosProcessador">Quantidade de Núcleos do Processador:</label>
+            <select id="nucleosProcessador" name="nucleosProcessador" required>
+                <option value="2">2 Núcleos</option>
+                <option value="4">4 Núcleos</option>
+                <option value="6">6 Núcleos</option>
+                <option value="8">8 Núcleos</option>
+                <option value="10">10 Núcleos</option>
+                <option value="12">12 Núcleos</option>
+                <option value="16">16 Núcleos</option>
+                <option value="20">20 Núcleos</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="capacidadeSSD">Capacidade do SSD (GB ou TB):</label>
+            <input type="text" id="capacidadeSSD" name="capacidadeSSD" required>
+        </div>
+
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <h2>Produtos Cadastrados</h2>
+    <div class="actions">
+        <input type="text" id="searchBar" placeholder="Buscar produto...">
+        <button id="removeButton">Remover Produto</button>
+    </div>
+    <div class="actions">
+        <select id="sortAsc">
+            <option value="">Ordenar Crescente Por</option>
+            <option value="codigo">Código</option>
+            <option value="fabricantePlacaMae">Placa-Mãe</option>
+            <option value="memoriaRAM">Memória RAM</option>
+            <option value="velocidadeProcessador">Velocidade do Processador</option>
+            <option value="fabricanteProcessador">Fabricante do Processador</option>
+            <option value="nucleosProcessador">Núcleos do Processador</option>
+            <option value="capacidadeSSD">Capacidade do SSD</option>
+        </select>
+
+        <select id="sortDesc">
+            <option value="">Ordenar Decrescente Por</option>
+            <option value="codigo">Código</option>
+            <option value="fabricantePlacaMae">Placa-Mãe</option>
+            <option value="memoriaRAM">Memória RAM</option>
+            <option value="velocidadeProcessador">Velocidade do Processador</option>
+            <option value="fabricanteProcessador">Fabricante do Processador</option>
+            <option value="nucleosProcessador">Núcleos do Processador</option>
+            <option value="capacidadeSSD">Capacidade do SSD</option>
+        </select>
+
+        <button id="editButton">Editar Produto</button>
+    </div>
+    <table id="productsTable">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Placa-Mãe</th>
+                <th>Memória RAM (GB)</th>
+                <th>Velocidade do Processador (GHz)</th>
+                <th>Fabricante do Processador</th>
+                <th>Núcleos do Processador</th>
+                <th>Capacidade do SSD</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
