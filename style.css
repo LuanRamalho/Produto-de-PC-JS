@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Mudança na cor de fundo para um tom mais suave */
     color: #333;
     padding: 20px;
 }
@@ -8,67 +8,80 @@ body {
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #007bff; /* Azul vibrante para títulos */
 }
 
 form {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 30px; /* Aumento do padding para um espaço mais confortável */
+    border-radius: 8px;
     max-width: 400px;
     margin: 0 auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumento do espaço entre os grupos */
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px; /* Aumento do espaço entre o label e o input */
+    font-weight: bold; /* Negrito nos labels para destaque */
 }
 
 input, select, button {
     width: 100%;
-    padding: 8px;
+    padding: 12px; /* Aumento do padding para um melhor toque */
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px; /* Aumento da fonte para melhor legibilidade */
 }
 
 button {
-    background-color: #28a745;
+    background-color: #28a745; /* Cor verde para o botão */
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
 }
 
 .actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Aumento da margem inferior para espaçamento */
 }
 
 .actions input {
-    width: calc(100% - 150px);
+    width: calc(100% - 160px); /* Ajuste para incluir margens */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 30px; /* Aumento do espaço acima da tabela */
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px; /* Aumento do padding para maior conforto */
     border: 1px solid #ccc;
     text-align: center;
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: #007bff; /* Azul vibrante para o cabeçalho da tabela */
+    color: #fff; /* Texto branco para contraste */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo para linhas pares da tabela */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Cor de fundo ao passar o mouse nas linhas da tabela */
 }
